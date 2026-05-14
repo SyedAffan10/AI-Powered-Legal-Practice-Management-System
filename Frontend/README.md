@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# Frontend - React Legal Practice Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React 19 + TypeScript frontend for AI-Powered Legal Practice Management System with Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 18+
+- npm or yarn
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+2. Configure environment:
+   - Create `.env` file with backend API URL
+   - `VITE_API_URL=http://localhost:8005`
+
+## Development
+
+Start development server:
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Build for production:
+```bash
+npm run build
 ```
+
+Preview production build:
+```bash
+npm run preview
+```
+
+Lint code:
+```bash
+npm run lint
+```
+
+## Tech Stack
+
+- **React 19** with TypeScript
+- **Vite** - Build tool
+- **Tailwind CSS 4** - Styling
+- **Redux Toolkit** - State management
+- **React Router 7** - Routing
+- **React Hook Form + Zod** - Form validation
+- **Radix UI** - UI components
+- **Recharts** - Data visualization
+
+## Project Structure
+
+```
+Frontend/
+├── src/
+│   ├── pages/         # Page components (admin, agency, agent, client)
+│   ├── components/    # Reusable components
+│   ├── features/      # Feature modules (auth, etc.)
+│   ├── hooks/         # Custom React hooks
+│   ├── services/      # API services
+│   ├── lib/           # Utilities
+│   ├── App.tsx
+│   └── routes.ts
+├── package.json
+├── vite.config.ts
+└── tsconfig.json
+```
+
+## User Roles
+
+- **Super Admin** - System administration and analytics
+- **Agency** - Agency management and operations
+- **Legal Agent** - Case and matter management
+- **Client** - Document and matter access
+
+## Deployment
+
+Configured for Vercel (see `vercel.json`). Build output: `dist/`
+
+---
+
+**Version**: 1.0.0
