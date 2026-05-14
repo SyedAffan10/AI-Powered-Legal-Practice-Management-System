@@ -1,0 +1,7 @@
+.env
+new_credentials.json
+service_account_credentials.json
+test.db
+
+# Python related
+__pycache__/

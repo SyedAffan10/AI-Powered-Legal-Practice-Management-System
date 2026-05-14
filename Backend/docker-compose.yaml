@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  tudor_api:
+    build:
+      context: .
+    ports:
+      - "8005:8005"
