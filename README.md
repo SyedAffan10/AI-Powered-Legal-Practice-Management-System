@@ -1,10 +1,10 @@
-# Tudor - AI-Powered Legal Practice Management System
+# AI-Powered Legal Practice Management System
 
 A comprehensive, multi-tenant AI-driven legal practice management platform designed for law firms and agencies to intelligently manage cases, clients, legal agents, and operations efficiently.
 
 ## Overview
 
-Tudor is a full-stack web application that revolutionizes legal practice operations with AI-powered automation, role-based access control, intelligent case management, document handling, and advanced analytics. The platform supports four primary user roles: **Super Admin**, **Agency**, **Legal Agent**, and **Client**.
+This full-stack web application revolutionizes legal practice operations with AI-powered automation, role-based access control, intelligent case management, document handling, and advanced analytics. The platform supports four primary user roles: **Super Admin**, **Agency**, **Legal Agent**, and **Client**.
 
 ## Understanding Legal Agents
 
@@ -84,7 +84,7 @@ Tudor is a full-stack web application that revolutionizes legal practice operati
 ## Project Structure
 
 ```
-Tudor/
+.
 ├── Backend/
 │   ├── app/
 │   │   ├── app.py                      # FastAPI main application
@@ -224,60 +224,3 @@ Create a `.env` file in the Backend and Frontend directories with necessary conf
 - **Type-Safe Development**: Full TypeScript support in frontend
 - **Intelligent Form Validation**: Zod schema validation with React Hook Form
 - **AI Legal Agent Optimization**: Intelligent workload distribution and case assignment
-
-## Development
-
-### Available Scripts
-
-**Frontend**:
-```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run lint     # Run ESLint
-npm run preview  # Preview production build
-```
-
-**Backend**:
-```bash
-python -m uvicorn app:app --reload  # Development server with auto-reload
-```
-
-## Deployment
-
-### Frontend
-- Configured for **Vercel** deployment (see `vercel.json`)
-- Build output: `dist/`
-
-### Backend
-- Docker containerization ready
-- Environment-based configuration
-- Supports cloud deployment (AWS, Azure, GCP)
-
-## Security Considerations
-
-- JWT-based authentication with PassLib hashing
-- CORS middleware configured
-- Type validation with Zod schemas
-- Environment variable protection
-- Google Service Account authentication for Drive API
-
-## Contributing
-
-1. Create a feature branch from `main`
-2. Make your changes with clear commit messages
-3. Ensure code follows project conventions
-4. Test thoroughly before submitting
-5. Create a Pull Request with detailed description
-
-## License
-
-[Add your license information here]
-
-## Support
-
-For issues, questions, or feature requests, please open an issue in the repository.
-
----
-
-**Last Updated**: May 2026  
-**Version**: 1.0.0
